@@ -16,7 +16,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const rateInquiries = [];
 
 async function detectProductInquiry(message) {
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
   const prompt = `
     User ka message: "${message}"
     Agar user kisi product ka rate/price/cost pooch raha hai tou:
@@ -35,7 +35,7 @@ async function detectProductInquiry(message) {
 }
 
 async function generateBotReply(message, isProductInquiry) {
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
   let prompt;
   if (isProductInquiry) {
     prompt = `Customer ne product ka rate pucha hai. Unhe politely batao ke hum rate check karke abhi batate hain. Urdu mein jawab do, 1-2 lines mein, friendly tone.`;
