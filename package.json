@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
+    "@google/generative-ai": "^0.21.0",
     "accepts": "^2.0.0",
     "agent-base": "^6.0.2",
     "asynckit": "^0.4.0",
